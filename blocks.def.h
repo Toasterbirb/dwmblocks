@@ -4,7 +4,7 @@ static const Block blocks[] = {
 	{" Mem: ", 		"free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",						30,					0},
 	{"CPU: ", 		"cpu_info",																		5,					0},
 	{"GPU: ", 		"gpu_info",																		5,					0},
-	{"Newsboat: ", 	"pgrep newsboat && echo '-' || newsboat -x reload ; newsboat -x print-unread", 	3600, 				10},
+	{"Newsboat: ", 	"pgrep newsboat && echo '-' || torsocks newsboat -x reload ; torsocks newsboat -x print-unread", 	3600, 				10},
 	{"", 			"date '+%b %d (%a) %H:%M%p '",													5,					0},
 };
 
